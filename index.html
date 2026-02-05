@@ -146,6 +146,10 @@
             color: white;
             transform: scale(1);
             animation: yesGlow 2s ease-in-out infinite;
+            max-width: 90vw;
+            word-wrap: break-word;
+            white-space: normal;
+            line-height: 1.3;
         }
 
         @keyframes yesGlow {
@@ -983,7 +987,9 @@
                     noBtn.style.display = 'none';
                     
                     yesBtn.style.transform = 'scale(1.8)';
-                    yesBtn.textContent = 'YES! (you know get choice oo 😏) ❤️';
+                    yesBtn.style.fontSize = window.innerWidth < 768 ? '16px' : '24px';
+                    yesBtn.style.padding = window.innerWidth < 768 ? '15px 20px' : '20px 40px';
+                    yesBtn.textContent = window.innerWidth < 768 ? 'YES! (you no get choice 😏)' : 'YES! (you know get choice oo 😏) ❤️';
                 }
             }, 250);
         }
