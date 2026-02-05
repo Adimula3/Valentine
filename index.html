@@ -146,10 +146,22 @@
             color: white;
             transform: scale(1);
             animation: yesGlow 2s ease-in-out infinite;
-            max-width: 90vw;
+            max-width: 85vw;
             word-wrap: break-word;
             white-space: normal;
             line-height: 1.3;
+        }
+
+        @media (max-width: 768px) {
+            .btn-yes {
+                max-width: 75vw;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .btn-yes {
+                max-width: 70vw;
+            }
         }
 
         @keyframes yesGlow {
@@ -986,9 +998,9 @@
                     noBtn.style.visibility = 'hidden';
                     noBtn.style.display = 'none';
                     
-                    yesBtn.style.transform = 'scale(1.8)';
-                    yesBtn.style.fontSize = window.innerWidth < 768 ? '16px' : '24px';
-                    yesBtn.style.padding = window.innerWidth < 768 ? '15px 20px' : '20px 40px';
+                    yesBtn.style.transform = window.innerWidth < 768 ? 'scale(1.3)' : 'scale(1.8)';
+                    yesBtn.style.fontSize = window.innerWidth < 768 ? '14px' : '24px';
+                    yesBtn.style.padding = window.innerWidth < 768 ? '12px 18px' : '20px 40px';
                     yesBtn.textContent = window.innerWidth < 768 ? 'YES! (you no get choice 😏)' : 'YES! (you know get choice oo 😏) ❤️';
                 }
             }, 250);
