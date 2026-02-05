@@ -674,14 +674,41 @@
         /* Responsive */
         @media (max-width: 768px) {
             .proposal-text {
-                font-size: 36px;
+                font-size: 32px;
+                padding: 0 30px;
+            }
+            .heart-decoration {
+                font-size: 80px;
+                margin-bottom: 30px;
             }
             .btn {
-                padding: 15px 30px;
-                font-size: 20px;
+                padding: 15px 25px;
+                font-size: 18px;
+                min-width: 120px;
             }
             .buttons-container {
-                gap: 20px;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .proposal-text {
+                font-size: 28px;
+                padding: 0 20px;
+            }
+            .heart-decoration {
+                font-size: 60px;
+                margin-bottom: 20px;
+            }
+            .btn {
+                padding: 12px 20px;
+                font-size: 16px;
+                min-width: 100px;
+            }
+            .buttons-container {
+                gap: 12px;
             }
             .celebration-video {
                 width: 90%;
